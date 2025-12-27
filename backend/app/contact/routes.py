@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from .tools import allowed_file
-from backend.app.mailer import send_cv_email
+from app.mailer import send_cv_email
 
 contact_bp = Blueprint("contact", __name__)
 
