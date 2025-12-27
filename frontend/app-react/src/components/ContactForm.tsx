@@ -71,7 +71,7 @@ export default function ContactForm() {
     return (
         <form onSubmit={handleSubmit} className="card shadow-sm p-4">
 
-            <h4 className="mb-3">Formulario de contacto</h4>
+            <h4 className="mb-3 text-center">Formulario de contacto</h4>
 
             {/* ERROR MESSAGE */}
             {error && (
@@ -95,6 +95,7 @@ export default function ContactForm() {
                     className="form-control"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
+                    disabled={loading}
                 />
             </div>
 
@@ -110,6 +111,7 @@ export default function ContactForm() {
                             setCv(e.target.files[0]);
                         }
                     }}
+                    disabled={loading}
                 />
                 <div className="form-text">
                     Formatos aceptados: PDF, DOC, DOCX
